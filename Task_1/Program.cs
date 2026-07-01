@@ -288,3 +288,4 @@ else if (weight > 5)
 Console.WriteLine("Base Cost: " + baseCost);
 Console.WriteLine("Extra: " + extra);
 Console.WriteLine("Total: " + (baseCost + extra));
+
