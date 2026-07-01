@@ -130,3 +130,19 @@ double bill = Convert.ToDouble(Console.ReadLine());
 Console.Write("Are you member? (yes/no): ");
 string mem = Console.ReadLine();
 bool isMember = false;
+
+if (mem == "yes")
+{
+    isMember = true;
+}
+
+double discount = 0;
+if (bill > 20 && isMember)
+{
+    discount = bill * 0.15;
+}
+double finalBill = bill - discount;
+
+Console.WriteLine("Original Bill: " + bill);
+Console.WriteLine("Discount: " + discount);
+Console.WriteLine("Final Bill: " + finalBill);
