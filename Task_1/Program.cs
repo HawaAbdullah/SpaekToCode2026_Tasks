@@ -87,6 +87,7 @@ switch (grade)
 }
 
 //Task 6 - Temperature Converter
-
-
-    
+Console.Write("Enter Celsius: ");
+double cel = Convert.ToDouble(Console.ReadLine());
+double F =(cel * 9 / 5) + 32;
+Console.WriteLine("Fahrenheit: " + F);
