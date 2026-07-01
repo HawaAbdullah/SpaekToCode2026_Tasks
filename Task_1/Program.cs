@@ -38,5 +38,23 @@ else
 //Task 4 - Voting Eligibility
 
 Console.WriteLine("Enter Age: ");
+int age2 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Do you have ID? (yes,no): ");
+string id = Console.ReadLine();
+bool hasID = false;
+//cheking
+if (id == "yse")
+{
+    hasID = true;
+}
+
+if (age2 >= 18 && hasID)
+{
+    Console.WriteLine("eligible to vote!");
+}
+else
+{
+    Console.WriteLine("not eligible to vote!");
+}
 
     
