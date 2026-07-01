@@ -14,6 +14,10 @@ Console.WriteLine("Enter length");
 double length = Convert.ToDouble(Console.ReadLine());
 Console.WriteLine("Enter width");
 double width = Convert.ToDouble(Console.ReadLine());
-
+//calcalit and print the result 
+double area = length * width;
+double Perimeter = 2 * (length + width);
+Console.WriteLine("Area: "+area);
+Console.WriteLine("Perimeter: "+Perimeter);
 
     
