@@ -148,3 +148,6 @@ Console.WriteLine("Discount: " + discount);
 Console.WriteLine("Final Bill: " + finalBill);
 
 //Task 9 - Day Name Finder
+
+Console.Write("Enter day number (1-7): ");
+int day = Convert.ToInt32(Console.ReadLine());
