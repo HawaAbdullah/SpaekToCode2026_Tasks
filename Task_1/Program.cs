@@ -9,5 +9,11 @@ Console.WriteLine("Age: "+age);
 Console.WriteLine("Height: "+height);
 Console.WriteLine("IsStudent: "+isStudent); 
 
-    
+//Task 2 - Rectangle Calculator
+Console.WriteLine("Enter length");
+double length = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Enter width");
+double width = Convert.ToDouble(Console.ReadLine());
+
+
     
