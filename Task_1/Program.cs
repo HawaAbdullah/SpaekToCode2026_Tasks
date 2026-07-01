@@ -103,3 +103,5 @@ else
 {
     Console.WriteLine("Hot");
 }
+
+//Task 7 - Movie Ticket Pricing
