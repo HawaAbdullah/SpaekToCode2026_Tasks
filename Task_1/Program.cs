@@ -21,5 +21,7 @@ Console.WriteLine("Area: "+area);
 Console.WriteLine("Perimeter: "+Perimeter);
 
 //Task 3 - Even or Odd Checker
+Console.WriteLine("Enter Number: ");
+int number = Convert.ToInt32(Console.ReadLine());
 
     
