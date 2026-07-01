@@ -121,3 +121,5 @@ else
 {
     Console.WriteLine("Senior: 3 OMR");
 }
+
+//Task 8 - Restaurant Bill with Membership Discount
