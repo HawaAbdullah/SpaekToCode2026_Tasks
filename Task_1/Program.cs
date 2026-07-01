@@ -1,4 +1,7 @@
 ﻿// Task 1 - (Personal Info Card)
+
+using System.Diagnostics;
+
 string name= "Sara";
 int age =20;
 double height =1.65;
@@ -59,6 +62,29 @@ else
 
 //Task 5 - Grade Letter Lookup
 
-Console.WriteLine("Enter Your grade!('A', 'B', 'C', 'D', or 'F)");
+Console.Write("Enter Your grade(A/B/C/D/F): ");
+char grade = Convert.ToChar(Console.ReadLine());
+switch (grade)
+{
+    case 'A':
+        Console.WriteLine("Excellent");
+        break;
+    case 'B':
+        Console.WriteLine("Very Good");
+        break;
+    case 'C':
+        Console.WriteLine("Good");
+        break;
+    case 'D' :
+        Console.WriteLine("Pass");
+        break;
+    case 'F' :
+        Console.WriteLine("Fail");
+        break;
+    default:
+        Console.WriteLine("Invalid grade");
+        break;
+}
+
 
     
