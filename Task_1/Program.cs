@@ -146,3 +146,5 @@ double finalBill = bill - discount;
 Console.WriteLine("Original Bill: " + bill);
 Console.WriteLine("Discount: " + discount);
 Console.WriteLine("Final Bill: " + finalBill);
+
+//Task 9 - Day Name Finder
