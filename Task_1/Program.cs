@@ -24,4 +24,15 @@ Console.WriteLine("Perimeter: "+Perimeter);
 Console.WriteLine("Enter Number: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
+
+//checking if it is ever or odd using if statment 
+if (number % 2 == 0)
+{
+    Console.WriteLine("Number is even");
+}
+else
+{
+    Console.WriteLine("Number is odd!");
+}
+
     
