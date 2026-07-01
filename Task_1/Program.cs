@@ -91,3 +91,15 @@ Console.Write("Enter Celsius: ");
 double cel = Convert.ToDouble(Console.ReadLine());
 double F =(cel * 9 / 5) + 32;
 Console.WriteLine("Fahrenheit: " + F);
+if (cel < 10)
+{
+    Console.WriteLine("Cold");
+}
+else if (cel <= 30)
+{
+    Console.WriteLine("Mild");
+}
+else
+{
+    Console.WriteLine("Hot");
+}
