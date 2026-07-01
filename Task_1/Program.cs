@@ -20,4 +20,6 @@ double Perimeter = 2 * (length + width);
 Console.WriteLine("Area: "+area);
 Console.WriteLine("Perimeter: "+Perimeter);
 
+//Task 3 - Even or Odd Checker
+
     
