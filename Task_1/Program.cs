@@ -105,3 +105,19 @@ else
 }
 
 //Task 7 - Movie Ticket Pricing
+
+Console.Write("Enter age: ");
+int mAge = Convert.ToInt32(Console.ReadLine());
+
+if (mAge <= 12)
+{
+    Console.WriteLine("Child: 2 OMR");
+}
+else if (mAge <= 59)
+{
+    Console.WriteLine("Adult: 5 OMR");
+}
+else
+{
+    Console.WriteLine("Senior: 3 OMR");
+}
