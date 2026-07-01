@@ -181,3 +181,11 @@ switch (day)
         break;
 }
 //Task 10 - Mini Calculator 
+Console.Write("Enter first number: ");
+double a = Convert.ToDouble(Console.ReadLine());
+
+Console.Write("Enter second number: ");
+double b = Convert.ToDouble(Console.ReadLine());
+
+Console.Write("Enter operator (+ - * / %): ");
+char op = Convert.ToChar(Console.ReadLine());
