@@ -248,3 +248,12 @@ else
 {
     Console.WriteLine("Not eligible for loan");
 }
+// Task 12 - Shipping Cost Calculator
+Console.Write("Enter region (A/B/C): ");
+char region = Convert.ToChar(Console.ReadLine());
+
+Console.Write("Enter weight: ");
+double weight = Convert.ToDouble(Console.ReadLine());
+
+double baseCost = 0;
+double extra = 0;
