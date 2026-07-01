@@ -189,3 +189,36 @@ double b = Convert.ToDouble(Console.ReadLine());
 
 Console.Write("Enter operator (+ - * / %): ");
 char op = Convert.ToChar(Console.ReadLine());
+
+switch (op)
+{
+    case '+':
+        Console.WriteLine(a + b);
+        break;
+
+    case '-':
+        Console.WriteLine(a - b);
+        break;
+
+    case '*':
+        Console.WriteLine(a * b);
+        break;
+
+    case '/':
+        if (b != 0)
+            Console.WriteLine(a / b);
+        else
+            Console.WriteLine("Cannot divide by zero");
+        break;
+
+    case '%':
+        if (b != 0)
+            Console.WriteLine(a % b);
+        else
+            Console.WriteLine("Cannot divide by zero");
+        break;
+
+    default:
+        Console.WriteLine("Invalid operator");
+        break;
+}
