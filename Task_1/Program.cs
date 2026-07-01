@@ -232,3 +232,19 @@ double income = Convert.ToDouble(Console.ReadLine());
 
 Console.Write("Do you have loan? (yes/no): ");
 string loan = Console.ReadLine();
+
+bool hasLoan = false;
+
+if (loan == "yes")
+{
+    hasLoan = true;
+}
+
+if (lAge >= 21 && lAge <= 60 && income >= 400 && !hasLoan)
+{
+    Console.WriteLine("Eligible for loan");
+}
+else
+{
+    Console.WriteLine("Not eligible for loan");
+}
