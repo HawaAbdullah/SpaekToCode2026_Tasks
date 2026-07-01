@@ -222,3 +222,13 @@ switch (op)
         Console.WriteLine("Invalid operator");
         break;
 }
+
+// Task 11 - Loan Eligibility System
+Console.Write("Enter age: ");
+int lAge = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Enter income: ");
+double income = Convert.ToDouble(Console.ReadLine());
+
+Console.Write("Do you have loan? (yes/no): ");
+string loan = Console.ReadLine();
