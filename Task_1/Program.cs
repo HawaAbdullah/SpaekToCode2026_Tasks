@@ -123,3 +123,10 @@ else
 }
 
 //Task 8 - Restaurant Bill with Membership Discount
+
+Console.Write("Enter bill: ");
+double bill = Convert.ToDouble(Console.ReadLine());
+
+Console.Write("Are you member? (yes/no): ");
+string mem = Console.ReadLine();
+bool isMember = false;
