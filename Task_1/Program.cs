@@ -299,4 +299,23 @@ double s2 = Convert.ToDouble(Console.ReadLine());
 
 Console.Write("Enter side 3: ");
 double s3 = Convert.ToDouble(Console.ReadLine());
-
+//
+if (s1 + s2 > s3 && s1 + s3 > s2 && s2 + s3 > s1)
+{
+    if (s1 == s2 && s2 == s3)
+    {
+        Console.WriteLine("Equilateral");
+    }
+    else if (s1 == s2 || s1 == s3 || s2 == s3)
+    {
+        Console.WriteLine("Isosceles");
+    }
+    else
+    {
+        Console.WriteLine("Scalene");
+    }
+}
+else
+{
+    Console.WriteLine("Not a valid triangle");
+}
