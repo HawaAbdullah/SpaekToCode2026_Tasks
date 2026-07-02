@@ -321,3 +321,11 @@ else
 }
 
 //Task 14 - Online Store Checkout
+Console.Write("Enter product code (1-3): ");
+int product = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Enter quantity: ");
+int qty = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Coupon? (yes/no): ");
+string coupon = Console.ReadLine();
