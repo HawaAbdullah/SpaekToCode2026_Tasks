@@ -371,3 +371,60 @@ Console.WriteLine("Subtotal: " + subtotal);
 Console.WriteLine("Discount: " + discount2);
 Console.WriteLine("Tax: " + tax);
 Console.WriteLine("Total: " + total);
+
+
+//Task 15 - University Admission Decision
+
+Console.Write("Enter program (S/A): ");
+char program = Convert.ToChar(Console.ReadLine());
+
+Console.Write("Enter GPA: ");
+double gpa = Convert.ToDouble(Console.ReadLine());
+
+Console.Write("Enter exam score: ");
+double score = Convert.ToDouble(Console.ReadLine());
+
+Console.Write("Extra activity? (yes/no): ");
+string extraa = Console.ReadLine();
+
+bool hasExtra = false;
+
+if (extraa == "yes")
+{
+    hasExtra = true;
+}
+
+if (program == 'S')
+{
+    if (gpa >= 3.0 && score >= 75)
+    {
+        Console.WriteLine("Admitted - Science");
+    }
+    else if (hasExtra)
+    {
+        Console.WriteLine("Conditionally Admitted - Science");
+    }
+    else
+    {
+        Console.WriteLine("Not Admitted - Science");
+    }
+}
+else if (program == 'A')
+{
+    if (gpa >= 2.5 && score >= 60)
+    {
+        Console.WriteLine("Admitted - Arts");
+    }
+    else if (hasExtra)
+    {
+        Console.WriteLine("Conditionally Admitted - Arts");
+    }
+    else
+    {
+        Console.WriteLine("Not Admitted - Arts");
+    }
+}
+else
+{
+    Console.WriteLine("Invalid program type");
+}
