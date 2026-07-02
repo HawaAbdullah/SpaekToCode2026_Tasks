@@ -329,3 +329,45 @@ int qty = Convert.ToInt32(Console.ReadLine());
 
 Console.Write("Coupon? (yes/no): ");
 string coupon = Console.ReadLine();
+
+bool hasCoupon = false;
+
+if (coupon == "yes")
+{
+    hasCoupon = true;
+}
+
+double price = 0;
+
+switch (product)
+{
+    case 1:
+        price = 8.5;
+        break;
+    case 2:
+        price = 12;
+        break;
+    case 3:
+        price = 5;
+        break;
+    default:
+        Console.WriteLine("Invalid product code");
+        return;
+}
+
+double subtotal = price * qty;
+double discount2 = 0;
+
+if (hasCoupon && subtotal > 20)
+{
+    discount2 = subtotal * 0.10;
+}
+
+double afterDiscount = subtotal - discount2;
+double tax = afterDiscount * 0.05;
+double total = afterDiscount + tax;
+
+Console.WriteLine("Subtotal: " + subtotal);
+Console.WriteLine("Discount: " + discount2);
+Console.WriteLine("Tax: " + tax);
+Console.WriteLine("Total: " + total);
