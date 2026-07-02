@@ -291,3 +291,12 @@ Console.WriteLine("Total: " + (baseCost + extra));
 
 //Task 13 - Triangle Type Classifier
 
+Console.Write("Enter side 1: ");
+double s1 = Convert.ToDouble(Console.ReadLine());
+
+Console.Write("Enter side 2: ");
+double s2 = Convert.ToDouble(Console.ReadLine());
+
+Console.Write("Enter side 3: ");
+double s3 = Convert.ToDouble(Console.ReadLine());
+
