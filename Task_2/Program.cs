@@ -48,6 +48,31 @@ class Program
         {
             Console.WriteLine(n + " x " + i + " = " + (n * i));
         }
+        //Task 4 - Password Retry
+
+        // Store the correct password
+        string correctPassword = "Spark2026";
+
+        // Variable to store user input
+        string userPassword = "";
+
+        // Keep asking until the correct password is entered
+        while (userPassword != correctPassword)
+        {
+            Console.Write("Enter password: ");
+            userPassword = Console.ReadLine();
+
+            // Check if the password is correct
+            if (userPassword == correctPassword)
+            {
+                Console.WriteLine("Access Granted");
+            }
+            else
+            {
+                Console.WriteLine("Incorrect password, try again");
+            }
+        }
+        
         
     }
 }
