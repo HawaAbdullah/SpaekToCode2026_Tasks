@@ -19,5 +19,23 @@ class Program
         // Print the final message after the countdown ends
         Console.WriteLine("Liftoff!");
         
+        //Task 2 - Sum of Numbers from 1 to N
+
+        
+        Console.Write("Enter a positive number: ");
+        int number = int.Parse(Console.ReadLine());
+
+        
+        int sum = 0;
+
+        //Add every number from 1 to N
+        for (int i = 1; i <= number; i++)
+        {
+            sum += i;
+        }
+
+        // Display the final sum
+        Console.WriteLine("Sum = " + sum);
+        
     }
 }
