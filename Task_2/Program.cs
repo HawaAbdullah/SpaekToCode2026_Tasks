@@ -198,6 +198,36 @@ class Program
             Console.WriteLine();
         }
         
+        // Task 8 - Sum of Even Numbers Only
+
+
+        // Ask user for a positive number
+        Console.Write("Enter a positive number: ");
+        int num = int.Parse(Console.ReadLine());
+
+
+        // Variable to store the sum
+        int s = 0;
+
+
+        // Loop from 1 to N
+        for (int i = 1; i <= num; i++)
+        {
+
+            // Check if the number is even
+            if (i % 2 == 0)
+            {
+                // Add even number to total
+                sum += i;
+            }
+
+        }
+
+
+        // Print final sum
+        Console.WriteLine("Sum of even numbers = " + sum);
+        
+        
         
     }
 }
