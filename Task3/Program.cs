@@ -12,5 +12,9 @@ class Program
         //Ask user to enter the secound number
         Console.Write("Enter the Second Numver: ");
         double SecondNumber = double.Parse(Console.ReadLine());
+        
+        //makc calculation (subtract ) 
+        double diff = FirstNumber - SecondNumber;
+        Console.WriteLine($"The difference is : {diff}");
     }
 }
