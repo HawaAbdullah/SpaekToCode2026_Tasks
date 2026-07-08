@@ -30,6 +30,19 @@ class Program
 
         double pow = Math.Pow(num,2);
         Console.WriteLine($"The Power or the number is {pow}");
+        
+        //Task 3 
+        // Ask user to enter full name
+        Console.Write("Enter your full name: ");
+        string fullName = Console.ReadLine();
+        //Conver the name to upper and lower case
+        string fullName1 = fullName.ToLower();
+        string fullName2 = fullName.ToUpper();
+        Console.WriteLine($"Lower {fullName} is {fullName1}");
+        Console.WriteLine($"Upper {fullName} is {fullName2}");
+        
+        
+
 
 
 
