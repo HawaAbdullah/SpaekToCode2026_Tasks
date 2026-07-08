@@ -41,7 +41,12 @@ class Program
         Console.WriteLine($"Lower {fullName} is {fullName1}");
         Console.WriteLine($"Upper {fullName} is {fullName2}");
         
+        //Count number of characters
+        int length = fullName.Length;
+        Console.WriteLine($"The length is {length}");
         
+
+
 
 
 
