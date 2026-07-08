@@ -45,6 +45,14 @@ class Program
         int length = fullName.Length;
         Console.WriteLine($"The length is {length}");
         
+        //Task 4
+        //Ask the user to enter the free trial period in days
+        Console.Write("Enter the number of free trial days: ");
+        int trialDays = int.Parse(Console.ReadLine());
+
+        //Get today's date
+        DateTime startDate = DateTime.Today;
+
 
 
 
