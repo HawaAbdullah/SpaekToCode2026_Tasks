@@ -16,5 +16,8 @@ class Program
         //makc calculation (subtract ) 
         double diff = FirstNumber - SecondNumber;
         Console.WriteLine($"The difference is : {diff}");
+
+        double result = Math.Abs(diff);
+        Console.WriteLine($"The Absolute difftent is: {result}");
     }
 }
