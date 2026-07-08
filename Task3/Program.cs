@@ -13,11 +13,17 @@ class Program
         Console.Write("Enter the Second Numver: ");
         double SecondNumber = double.Parse(Console.ReadLine());
         
-        //makc calculation (subtract ) 
+        //make calculation (subtract ) 
         double diff = FirstNumber - SecondNumber;
         Console.WriteLine($"The difference is : {diff}");
-
+        
+        //To make the ruslt always Positive.
         double result = Math.Abs(diff);
         Console.WriteLine($"The Absolute difftent is: {result}");
+        
+        //Task 2
+        
+        
+        
     }
 }
