@@ -22,8 +22,16 @@ class Program
         Console.WriteLine($"The Absolute difftent is: {result}");
         
         //Task 2
-        
-        
-        
+        Console.Write("Enter a number: ");
+        double num = double.Parse(Console.ReadLine());
+
+        double sq = Math.Sqrt(num);
+        Console.WriteLine($"The sqrt is :{sq}");
+
+        double pow = Math.Pow(num,2);
+        Console.WriteLine($"The Power or the number is {pow}");
+
+
+
     }
 }
