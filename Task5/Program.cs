@@ -277,9 +277,69 @@ class Program
         {
             Console.WriteLine(itemm);
         }
+        
+        // Function to calculate the average of all grades
+        static double CalculateAverage(List<int> grades)
+        {
+            int sum = 0;
+
+            for (int i = 0; i < grades.Count; i++)
+            {
+                sum += grades[i];
+            }
+
+            return (double)sum / grades.Count;
+        }
 
 
+        // Function to find the first failing grade
+        static int FindFirstFailing(List<int> grades)
+        {
+            return grades.Find(x => x < 60);
+        }
 
+
+        static void Main(string[] args)
+        {
+
+            // Create a list to store grades
+            List<int> grades = new List<int>();
+
+
+            // Ask the user how many grades they want to enter
+            Console.Write("How many grades do you want to enter? ");
+            int numberOfGrades = int.Parse(Console.ReadLine());
+
+
+            // Read grades from the user
+            for (int i = 0; i < numberOfGrades; i++)
+            {
+                Console.Write("Enter grade " + (i + 1) + ": ");
+                grades.Add(int.Parse(Console.ReadLine()));
+            }
+
+
+            // Call CalculateAverage function
+            double average = CalculateAverage(grades);
+
+            Console.WriteLine("\nAverage Grade: " + average);
+
+
+            // Call FindFirstFailing function
+            int failingGrade = FindFirstFailing(grades);
+
+
+            if (failingGrade == 0)
+            {
+                Console.WriteLine("No failing grades found.");
+            }
+            else
+            {
+                Console.WriteLine("First Failing Grade: " + failingGrade);
+            }
+
+
+            }
 
     }
 }
