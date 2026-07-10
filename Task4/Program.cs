@@ -86,6 +86,17 @@ class Program
         }
     }
 
+    // Function that prints countdown numbers
+    // It takes one integer parameter and returns nothing
+    static void Countdown(int startNumber)
+    {
+        for (int i = startNumber; i >= 1; i--)
+        {
+            Console.WriteLine(i);
+        }
+
+        Console.WriteLine("Finished!");
+    }
     
     static void Main(string[] args)
     {
@@ -165,6 +176,14 @@ class Program
 
         // Print the result in Main
         Console.WriteLine("Grade: " + grade);
+        
+        // Ask the user for the starting number
+        Console.Write("Enter starting number: ");
+        int number = int.Parse(Console.ReadLine());
+
+
+        // Call the countdown function
+        Countdown(number);
         
     }
 }
