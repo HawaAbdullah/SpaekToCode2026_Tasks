@@ -162,6 +162,10 @@ class Program
         {
             Console.WriteLine("Invalid date or number format.");
         }
+        //Task 9
+        
+        Console.Write("Enter a decimal number: ");
+        double number = double.Parse(Console.ReadLine());
 
 
 
