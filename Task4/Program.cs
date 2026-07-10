@@ -59,6 +59,32 @@ class Program
     {
         return 2 * (length + width);
     }
+    
+    // Function that returns the grade letter based on score
+    // Takes an integer parameter and returns a string
+    static string GetGradeLetter(int score)
+    {
+        if (score >= 90)
+        {
+            return "A";
+        }
+        else if (score >= 80)
+        {
+            return "B";
+        }
+        else if (score >= 70)
+        {
+            return "C";
+        }
+        else if (score >= 60)
+        {
+            return "D";
+        }
+        else
+        {
+            return "F";
+        }
+    }
 
     
     static void Main(string[] args)
@@ -127,6 +153,18 @@ class Program
         // Print the results in Main
         Console.WriteLine("Area = " + area);
         Console.WriteLine("Perimeter = " + perimeter);
+        
+        // Ask the user to enter the score
+        Console.Write("Enter your score: ");
+        int score = int.Parse(Console.ReadLine());
+
+
+        // Call the function and store the returned grade
+        string grade = GetGradeLetter(score);
+
+
+        // Print the result in Main
+        Console.WriteLine("Grade: " + grade);
         
     }
 }
