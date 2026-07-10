@@ -1,7 +1,28 @@
 ﻿namespace Task5;
 
 class Program
+
 {
+    // Function to remove a print job from the queue
+    static Queue<string> RemoveJob(Queue<string> queue, string jobName)
+    {
+        Queue<string> updatedQueue = new Queue<string>();
+
+
+        // Move jobs except the one to remove
+        while (queue.Count > 0)
+        {
+            string currentJob = queue.Dequeue();
+
+            if (currentJob != jobName)
+            {
+                updatedQueue.Enqueue(currentJob);
+            }
+        }
+
+        return updatedQueue;
+    }
+
     static void Main(string[] args)
     {
         // Create an array with fixed size of 5 integers to store grades
@@ -340,6 +361,51 @@ class Program
 
 
             }
+        // Create a print queue
+        Queue<string> printQueue = new Queue<string>();
+
+
+        // Read print jobs from the user
+        while (true)
+        {
+            Console.Write("Enter print job (or type done): ");
+            string job = Console.ReadLine();
+
+            if (job.ToLower() == "done")
+            {
+                break;
+            }
+
+            printQueue.Enqueue(job);
+        }
+
+
+        // Print queue before removing a job
+        Console.WriteLine("\nPrint Queue Before Removal:");
+
+        foreach (string i in printQueue)
+        {
+            Console.WriteLine(item);
+        }
+
+
+        // Ask the user which job to remove
+        Console.Write("\nEnter job name to cancel: ");
+        string removeJob = Console.ReadLine();
+
+
+        // Call RemoveJob function
+        printQueue = RemoveJob(printQueue, removeJob);
+
+
+        // Print queue after removing a job
+        Console.WriteLine("\nPrint Queue After Removal:");
+
+        foreach (string i in printQueue)
+        {
+            Console.WriteLine(item);
+        }
+
 
     }
 }
