@@ -63,7 +63,8 @@ class Program
         Console.WriteLine("Enter your exam scor: ");
         double score = double.Parse(Console.ReadLine());
         
-        
+        double roundedScore = Math.Round(score);
+       
 
 
 
