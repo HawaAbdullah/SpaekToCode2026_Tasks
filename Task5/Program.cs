@@ -80,6 +80,45 @@ class Program
 
 
         Console.WriteLine("You are now on: " + history.Peek());
+        
+        // Create a Queue to store customer names
+        Queue<string> customers = new Queue<string>();
+
+
+        // Ask the user to enter 3 customer names
+        for (int i = 0; i < 3; i++)
+        {
+            Console.Write("Enter customer name " + (i + 1) + ": ");
+            string name = Console.ReadLine();
+
+            // Add customer to the queue
+            customers.Enqueue(name);
+        }
+
+
+        Console.WriteLine("\nCustomers Waiting:");
+
+        // Display customers in the queue
+        foreach (string customer in customers)
+        {
+            Console.WriteLine(customer);
+        }
+
+
+        // Serve the first customer
+        string servedCustomer = customers.Dequeue();
+
+
+        Console.WriteLine("\nCustomer Served:");
+        Console.WriteLine(servedCustomer);
+
+
+        Console.WriteLine("\nRemaining Customers:");
+
+        foreach (string customer in customers)
+        {
+            Console.WriteLine(customer);
+        }
 
     }
 }
