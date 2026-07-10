@@ -12,6 +12,16 @@ class Program
     {
         return number * number;
     }
+    
+    // Function that converts Celsius temperature to Fahrenheit
+    // It takes a double parameter and returns a double value
+    static double CelsiusToFahrenheit(double celsius)
+    {
+        double fahrenheit = (celsius * 9 / 5) + 32;
+
+        return fahrenheit;
+    }
+    
     static void Main(string[] args)
     {
         // Ask the user for their name
@@ -30,6 +40,16 @@ class Program
 
         // Print the result in Main
         Console.WriteLine("Square = " + result);
+        
+        // Ask the user to enter temperature in Celsius
+        Console.Write("Enter temperature in Celsius: ");
+        double celsiusValue = double.Parse(Console.ReadLine());
+
+        // Call the function and store the returned value
+        double fahrenheitValue = CelsiusToFahrenheit(celsiusValue);
+
+        // Print the result in Main
+        Console.WriteLine("Temperature in Fahrenheit: " + fahrenheitValue);
         
     }
 }
