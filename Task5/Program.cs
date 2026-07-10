@@ -47,5 +47,39 @@ class Program
         {
             Console.WriteLine("- " + task);
         }
+        // Create a Stack to store browser history
+        Stack<string> history = new Stack<string>();
+
+
+        // Ask the user to enter 3 website URLs
+        for (int i = 0; i < 3; i++)
+        {
+            Console.Write("Enter website URL " + (i + 1) + ": ");
+            string url = Console.ReadLine();
+
+            // Add website to the stack
+            history.Push(url);
+        }
+
+
+        Console.WriteLine("\nBrowser History:");
+
+        // Display current history
+        foreach (string page in history)
+        {
+            Console.WriteLine(page);
+        }
+
+
+        // Simulate pressing the Back button
+        string currentPage = history.Pop();
+
+
+        Console.WriteLine("\nBack button pressed...");
+        Console.WriteLine("You returned from: " + currentPage);
+
+
+        Console.WriteLine("You are now on: " + history.Peek());
+
     }
 }
