@@ -59,6 +59,10 @@ class Program
         Console.WriteLine("Subscription End Date: " + endDate.ToString("yyyy-MM-dd"));
 
         //Task 5
+        //Ask the user to enter the exam score
+        Console.WriteLine("Enter your exam scor: ");
+        double score = double.Parse(Console.ReadLine());
+        
         
 
 
