@@ -234,6 +234,49 @@ class Program
         Console.WriteLine("1st Place: " + scores[0]);
         Console.WriteLine("2nd Place: " + scores[1]);
         Console.WriteLine("3rd Place: " + scores[2]);
+        
+        // Create a stack to store editor actions
+        Stack<string> actions = new Stack<string>();
+
+
+        // Variable to store user input
+        string action = "";
+
+
+        // Keep asking for actions until the user types "stop"
+        while (action.ToLower() != "stop")
+        {
+            Console.Write("Enter an action (or type stop to finish): ");
+            action = Console.ReadLine();
+
+            // Add the action to the stack if it is not "stop"
+            if (action.ToLower() != "stop")
+            {
+                actions.Push(action);
+            }
+        }
+
+
+        // Undo the last action
+        if (actions.Count > 0)
+        {
+            Console.WriteLine("\nFirst Undo: " + actions.Pop());
+        }
+
+        // Undo the second last action
+        if (actions.Count > 0)
+        {
+            Console.WriteLine("Second Undo: " + actions.Pop());
+        }
+
+
+        // Print remaining actions
+        Console.WriteLine("\nRemaining Actions:");
+
+        foreach (string itemm in actions)
+        {
+            Console.WriteLine(itemm);
+        }
 
 
 
