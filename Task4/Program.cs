@@ -134,6 +134,48 @@ class Program
         return leng * wid;
     }
     
+    // Function to add two numbers
+    static double Add(double number1, double number2)
+    {
+        return number1 + number2;
+    }
+
+
+    // Function to subtract two numbers
+    static double Subtract(double number1, double number2)
+    {
+        return number1 - number2;
+    }
+
+
+    // Function to multiply two numbers
+    static double MultiplyNumbers(double number1, double number2)
+    {
+        return number1 * number2;
+    }
+
+
+    // Function to divide two numbers
+    static double DivideNumbers(double number1, double number2)
+    {
+        try
+        {
+            return number1 / number2;
+        }
+        catch (DivideByZeroException)
+        {
+            Console.WriteLine("Cannot divide by zero");
+            return 0;
+        }
+    }
+
+
+    // Function to display result
+    static void DisplayResult(string operation, double result)
+    {
+        Console.WriteLine(operation + " Result = " + result);
+    }
+    
     
     
     static void Main(string[] args)
@@ -278,6 +320,89 @@ class Program
         {
             Console.WriteLine("Invalid choice");
         }
+        
+         bool running = true;
+
+
+            while (running)
+            {
+
+                Console.WriteLine("================");
+                Console.WriteLine("Calculator Menu");
+                Console.WriteLine("1) Add");
+                Console.WriteLine("2) Subtract");
+                Console.WriteLine("3) Multiply");
+                Console.WriteLine("4) Divide");
+                Console.WriteLine("5) Exit");
+                Console.WriteLine("================");
+
+
+                Console.Write("Choose operation: ");
+                int choic = int.Parse(Console.ReadLine());
+
+
+                if (choic == 5)
+                {
+                    running = false;
+                    Console.WriteLine("Calculator Closed");
+                    break;
+                }
+
+
+                Console.Write("Enter first number: ");
+                double n1 = double.Parse(Console.ReadLine());
+
+
+                Console.Write("Enter second number: ");
+                double n2 = double.Parse(Console.ReadLine());
+
+
+                double resultt = 0;
+
+
+                switch (choic)
+                {
+                    case 1:
+
+                        resultt = Add(n1, n2);
+                        DisplayResult("Addition", resultt);
+
+                        break;
+
+
+                    case 2:
+
+                        resultt = Subtract(n1, n2);
+                        DisplayResult("Subtraction", resultt);
+
+                        break;
+
+
+                    case 3:
+
+                        resultt = MultiplyNumbers(n1, n2);
+                        DisplayResult("Multiplication", resultt);
+
+                        break;
+
+
+                    case 4:
+
+                        resultt = DivideNumbers(n1, n2);
+                        DisplayResult("Division", resultt);
+
+                        break;
+
+
+                    default:
+
+                        Console.WriteLine("Invalid choice");
+
+                        break;
+                }
+
+            }
+
 
         
     }
