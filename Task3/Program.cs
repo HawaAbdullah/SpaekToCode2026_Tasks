@@ -52,6 +52,11 @@ class Program
 
         //Get today's date
         DateTime startDate = DateTime.Today;
+        
+        //Calculate the subscription end date
+        DateTime endDate = startDate.AddDays(trialDays); 
+        //Display the end date in yyyy-MM-dd format
+        Console.WriteLine("Subscription End Date: " + endDate.ToString("yyyy-MM-dd"));
 
 
 
