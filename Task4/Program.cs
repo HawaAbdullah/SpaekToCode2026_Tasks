@@ -117,6 +117,25 @@ class Program
     {
         return number1 * number2 * number3;
     }
+    
+    
+    // Calculate square area
+    // Takes one double parameter
+    static double CalculateArea(double side)
+    {
+        return side * side;
+    }
+
+
+    // Calculate rectangle area
+    // Takes two double parameters
+    static double CalculateAreaa(double leng, double wid)
+    {
+        return leng * wid;
+    }
+    
+    
+    
     static void Main(string[] args)
     {
         // Ask the user for their name
@@ -217,6 +236,48 @@ class Program
         // Call Multiply with three int parameters
         int result3 = Multiply(2, 3, 4);
         Console.WriteLine("Three integers result: " + result3);
+        
+        Console.WriteLine("Choose shape:");
+        Console.WriteLine("1) Square");
+        Console.WriteLine("2) Rectangle");
+
+        Console.Write("Enter your choice: ");
+        int choice = int.Parse(Console.ReadLine());
+
+
+        if (choice == 1)
+        {
+            // Read square side
+            Console.Write("Enter side length: ");
+            double side = double.Parse(Console.ReadLine());
+
+
+            // Call square overload
+            double areaa = CalculateArea(side);
+
+
+            Console.WriteLine("Square Area = " + area);
+        }
+        else if (choice == 2)
+        {
+            // Read rectangle dimensions
+            Console.Write("Enter length: ");
+            double leng = double.Parse(Console.ReadLine());
+
+            Console.Write("Enter width: ");
+            double wid = double.Parse(Console.ReadLine());
+
+
+            // Call rectangle overload
+            double areaa = CalculateAreaa(leng, wid);
+
+
+            Console.WriteLine("Rectangle Area = " + area);
+        }
+        else
+        {
+            Console.WriteLine("Invalid choice");
+        }
 
         
     }
