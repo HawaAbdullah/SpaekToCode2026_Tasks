@@ -205,6 +205,36 @@ class Program
         {
             Console.WriteLine("- " + product);
         }
+        
+        // Create a list to store game scores
+        List<int> scores = new List<int>();
+
+
+        // Ask the user to enter 5 scores
+        for (int i = 0; i < 5; i++)
+        {
+            Console.Write("Enter score " + (i + 1) + ": ");
+            int score = int.Parse(Console.ReadLine());
+
+            scores.Add(score);
+        }
+
+
+        // Sort scores in ascending order
+        scores.Sort();
+
+
+        // Reverse the list to make it descending
+        scores.Reverse();
+
+
+        // Print the top 3 scores
+        Console.WriteLine("\nTop 3 Scores:");
+
+        Console.WriteLine("1st Place: " + scores[0]);
+        Console.WriteLine("2nd Place: " + scores[1]);
+        Console.WriteLine("3rd Place: " + scores[2]);
+
 
 
 
