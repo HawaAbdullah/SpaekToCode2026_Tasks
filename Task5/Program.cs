@@ -119,6 +119,45 @@ class Program
         {
             Console.WriteLine(customer);
         }
+        
+        // Create an array to store 5 grades
+        int[] g = new int[5];
+
+
+        // Get grades from user
+        for (int i = 0; i < g.Length; i++)
+        {
+            Console.Write("Enter grade " + (i + 1) + ": ");
+            g[i] = int.Parse(Console.ReadLine());
+        }
+
+
+        // Sort the array from smallest to largest
+        Array.Sort(g);
+
+
+        // Calculate total of grades
+        int sum = 0;
+
+        for (int i = 0; i < g.Length; i++)
+        {
+            sum += g[i];
+        }
+
+
+        // Calculate average
+        double average = sum / 5.0;
+
+
+        // Print results
+        Console.WriteLine("\nGrade Results:");
+
+        Console.WriteLine("Lowest Grade: " + g[0]);
+
+        Console.WriteLine("Highest Grade: " + g[g.Length - 1]);
+
+        Console.WriteLine("Average: " + average);
+
 
     }
 }
