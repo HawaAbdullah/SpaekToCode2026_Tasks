@@ -165,21 +165,67 @@ class Program
         //Task 9
         
         Console.Write("Enter a decimal number: ");
-        double number = double.Parse(Console.ReadLine());
+        double n = double.Parse(Console.ReadLine());
         
         
-        double rounded = Math.Round(number);
+        double rouned = Math.Round(n);
 
         
-        double roundedUp = Math.Ceiling(number);
+        double roundUp = Math.Ceiling(n);
 
         
-        double roundedDown = Math.Floor(number);
+        double rounDown = Math.Floor(n);
 
         //Display the results
+        Console.WriteLine("Nearest Whole Number: " + rouned);
+        Console.WriteLine("Rounded Up: " + roundUp);
+        Console.WriteLine("Rounded Down: " + rounDown);
+        
+        
+        // Ask the user to enter a decimal number
+        Console.Write("Enter a decimal number: ");
+        double number = double.Parse(Console.ReadLine());
+
+        // Round to the nearest whole number
+        double rounded = Math.Round(number);
+
+        // Always round up
+        double roundedUp = Math.Ceiling(number);
+
+        // Always round down
+        double roundedDown = Math.Floor(number);
+
+        // Display the results
         Console.WriteLine("Nearest Whole Number: " + rounded);
         Console.WriteLine("Rounded Up: " + roundedUp);
         Console.WriteLine("Rounded Down: " + roundedDown);
+        
+        // Task 10 - Word Position Finder
+        
+        // Ask the user to enter a sentence
+        Console.Write("Enter a sentence: ");
+        string sentence = Console.ReadLine();
+
+        // Ask the user to enter a word to search for
+        Console.Write("Enter a word to search: ");
+        string word = Console.ReadLine();
+
+        // Find the first occurrence of the word
+        int firstPosition = sentence.IndexOf(word);
+
+        // Find the last occurrence of the word
+        int lastPosition = sentence.LastIndexOf(word);
+
+        // Check if the word exists
+        if (firstPosition == -1)
+        {
+            Console.WriteLine("Word not found");
+        }
+        else
+        {
+            Console.WriteLine("First occurrence position: " + firstPosition);
+            Console.WriteLine("Last occurrence position: " + lastPosition);
+        }
 
 
 
