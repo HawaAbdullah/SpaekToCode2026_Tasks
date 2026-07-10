@@ -166,6 +166,20 @@ class Program
         
         Console.Write("Enter a decimal number: ");
         double number = double.Parse(Console.ReadLine());
+        
+        
+        double rounded = Math.Round(number);
+
+        
+        double roundedUp = Math.Ceiling(number);
+
+        
+        double roundedDown = Math.Floor(number);
+
+        //Display the results
+        Console.WriteLine("Nearest Whole Number: " + rounded);
+        Console.WriteLine("Rounded Up: " + roundedUp);
+        Console.WriteLine("Rounded Down: " + roundedDown);
 
 
 
