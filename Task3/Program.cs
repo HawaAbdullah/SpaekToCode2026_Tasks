@@ -66,8 +66,15 @@ class Program
         double roundedScore = Math.Round(score);
        
         Console.WriteLine($"Your score is {roundedScore}");
-        
-        
+
+        if (roundedScore >= 67)
+        {
+            Console.WriteLine("Student :Pass");
+        }
+        else
+        {
+            Console.WriteLine("Student :Fail");
+        }
 
 
 
