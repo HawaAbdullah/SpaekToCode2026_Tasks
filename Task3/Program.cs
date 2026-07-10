@@ -75,6 +75,37 @@ class Program
         {
             Console.WriteLine("Student :Fail");
         }
+        
+        //Task 6
+        
+        // Ask the user to enter a password
+        Console.Write("Enter your password: ");
+        string password = Console.ReadLine();
+
+        // Check if the password has at least 8 characters
+        bool hasValidLength = password.Length >= 8;
+
+        // Check if the password contains the forbidden word
+        bool containsForbiddenWord = password.ToLower().Contains("password");
+
+        // Check if the password is strong
+        if (hasValidLength && !containsForbiddenWord)
+        {
+            Console.WriteLine("Strong Password");
+        }
+        else
+        {
+            Console.WriteLine("Weak Password");
+
+            if (!hasValidLength)
+            {
+                Console.WriteLine("Reason: Password must be at least 8 characters long.");
+            }
+
+            if (containsForbiddenWord)
+            {
+                Console.WriteLine("Reason: Password must not contain the word 'password'.");
+            }
 
 
 
