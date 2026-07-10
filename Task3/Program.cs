@@ -65,6 +65,9 @@ class Program
         
         double roundedScore = Math.Round(score);
        
+        Console.WriteLine($"Your score is {roundedScore}");
+        
+        
 
 
 
