@@ -130,6 +130,38 @@ class Program
                 Console.WriteLine("No Match");
             }
         }
+        
+        //Task 8 
+        try
+        {
+            // Ask the user to enter the membership start date
+            Console.Write("Enter membership start date (yyyy-MM-dd): ");
+            DateTime SDate = DateTime.Parse(Console.ReadLine());
+
+            // Ask the user to enter the membership duration
+            Console.Write("Enter membership days: ");
+            int membershipDays = int.Parse(Console.ReadLine());
+
+            // Calculate the expiry date
+            DateTime expiryDate = SDate.AddDays(membershipDays);
+
+            // Display the expiry date
+            Console.WriteLine("Expiry Date: " + expiryDate.ToString("yyyy-MM-dd"));
+
+            // Check if the membership is still active
+            if (expiryDate >= DateTime.Today)
+            {
+                Console.WriteLine("Membership Status: Active");
+            }
+            else
+            {
+                Console.WriteLine("Membership Status: Expired");
+            }
+        }
+        catch (FormatException)
+        {
+            Console.WriteLine("Invalid date or number format.");
+        }
 
 
 
