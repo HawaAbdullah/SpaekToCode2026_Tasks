@@ -107,6 +107,30 @@ class Program
                 Console.WriteLine("Reason: Password must not contain the word 'password'.");
             }
 
+            //Task 7
+            // Ask the user to enter the first name
+            Console.Write("Enter the first name: ");
+            string firstName = Console.ReadLine();
+
+            // Ask the user to enter the second name
+            Console.Write("Enter the second name: ");
+            string secondName = Console.ReadLine();
+
+            // Remove extra spaces and ignore letter case
+            firstName = firstName.Trim().ToUpper();
+            secondName = secondName.Trim().ToUpper();
+
+            // Compare the two names
+            if (firstName == secondName)
+            {
+                Console.WriteLine("Match");
+            }
+            else
+            {
+                Console.WriteLine("No Match");
+            }
+        }
+
 
 
 
