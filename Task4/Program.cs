@@ -21,6 +21,18 @@ class Program
 
         return fahrenheit;
     }
+    // Function that displays a fixed menu
+    // It takes no parameters and returns nothing
+    static void DisplayMenu()
+    {
+        Console.WriteLine("===== Menu =====");
+        Console.WriteLine("1) Start");
+        Console.WriteLine("2) Help");
+        Console.WriteLine("3) Exit");
+        Console.WriteLine("================");
+    }
+
+
     
     static void Main(string[] args)
     {
@@ -50,6 +62,9 @@ class Program
 
         // Print the result in Main
         Console.WriteLine("Temperature in Fahrenheit: " + fahrenheitValue);
+        
+        // Call the function to display the menu
+        DisplayMenu();
         
     }
 }
