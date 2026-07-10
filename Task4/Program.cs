@@ -177,6 +177,55 @@ class Program
     }
     
     
+    // Function to calculate the average of three scores
+    // Takes three double parameters and returns double
+    static double CalculateAverage(double score1, double score2, double score3)
+    {
+        return (score1 + score2 + score3) / 3;
+    }
+
+
+    // Function to determine grade letter
+    // Takes average and returns grade
+    static string GetGradeLetter(double average)
+    {
+        if (average >= 90)
+        {
+            return "A";
+        }
+        else if (average >= 80)
+        {
+            return "B";
+        }
+        else if (average >= 70)
+        {
+            return "C";
+        }
+        else if (average >= 60)
+        {
+            return "D";
+        }
+        else
+        {
+            return "F";
+        }
+    }
+
+
+    // Function to print final report card
+    // Takes name, average, and grade
+    static void PrintReportCard(string name, double average, string grade)
+    {
+        Console.WriteLine("======================");
+        Console.WriteLine("Student Report Card");
+        Console.WriteLine("======================");
+
+        Console.WriteLine("Name: " + name);
+        Console.WriteLine("Average: " + average);
+        Console.WriteLine("Grade: " + grade);
+
+        Console.WriteLine("======================");
+    }
     
     static void Main(string[] args)
     {
@@ -402,6 +451,34 @@ class Program
                 }
 
             }
+            // Ask student information
+            Console.Write("Enter student name: ");
+            string studentName = Console.ReadLine();
+
+
+            Console.Write("Enter first score: ");
+            double score1 = double.Parse(Console.ReadLine());
+
+
+            Console.Write("Enter second score: ");
+            double score2 = double.Parse(Console.ReadLine());
+
+
+            Console.Write("Enter third score: ");
+            double score3 = double.Parse(Console.ReadLine());
+
+
+            // Calculate average
+            double average = CalculateAverage(score1, score2, score3);
+
+
+            // Get grade letter
+            string gradee = GetGradeLetter(average);
+
+
+            // Print report card
+            PrintReportCard(studentName, average, grade);
+
 
 
         
