@@ -98,6 +98,25 @@ class Program
         Console.WriteLine("Finished!");
     }
     
+    // Multiply two integers
+    static int Multiply(int number1, int number2)
+    {
+        return number1 * number2;
+    }
+
+
+    // Multiply two double numbers
+    static double Multiply(double number1, double number2)
+    {
+        return number1 * number2;
+    }
+
+
+    // Multiply three integers
+    static int Multiply(int number1, int number2, int number3)
+    {
+        return number1 * number2 * number3;
+    }
     static void Main(string[] args)
     {
         // Ask the user for their name
@@ -184,6 +203,21 @@ class Program
 
         // Call the countdown function
         Countdown(number);
+        
+        // Call Multiply with two int parameters
+        int result1 = Multiply(5, 4);
+        Console.WriteLine("Two integers result: " + result1);
+
+
+        // Call Multiply with two double parameters
+        double result2 = Multiply(2.5, 4.0);
+        Console.WriteLine("Two doubles result: " + result2);
+
+
+        // Call Multiply with three int parameters
+        int result3 = Multiply(2, 3, 4);
+        Console.WriteLine("Three integers result: " + result3);
+
         
     }
 }
