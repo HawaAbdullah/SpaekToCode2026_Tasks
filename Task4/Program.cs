@@ -32,6 +32,19 @@ class Program
         Console.WriteLine("================");
     }
 
+    // Function that checks if a number is even
+    // It takes an integer parameter and returns a boolean value
+    static bool IsEven(int number)
+    {
+        if (number % 2 == 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 
     
     static void Main(string[] args)
@@ -65,6 +78,23 @@ class Program
         
         // Call the function to display the menu
         DisplayMenu();
+        
+        // Ask the user to enter a number
+        Console.Write("Enter a number: ");
+        int userNum = int.Parse(Console.ReadLine());
+
+        // Call the function and store the returned value
+        bool res = IsEven(userNum);
+
+        // Use if-else in Main to print the result
+        if (res)
+        {
+            Console.WriteLine("Even");
+        }
+        else
+        {
+            Console.WriteLine("Odd");
+        }
         
     }
 }
