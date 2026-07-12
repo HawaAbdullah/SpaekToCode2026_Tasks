@@ -4,7 +4,7 @@ class Program
 {
     static List<string> accountsNames = new List<string>();
     static List<int> accountNumbers = new List<int>();
-    static List<double> balances = new List<double>();
+    static List<double> accountBalances = new List<double>();
     static void Main(string[] args)
     {
         Console.WriteLine("Enter your name: ");
@@ -18,7 +18,17 @@ class Program
             Console.WriteLine("Your account number already exists");
             return;
         }
-        
+
+        Console.WriteLine("Enter initial deposit amount: ");
+        double balance = double.Parse(Console.ReadLine());
+        if (balance < 0)
+        {
+            Console.WriteLine("Error: Negative balance");
+            return;
+        }
+        accountsNames.Add(name);
+        accountNumbers.Add(accountNumber);
+        accountBalances.Add(balance);
         Console.WriteLine("Welcome to Spark Bank ");
         bool exit = false;
         
