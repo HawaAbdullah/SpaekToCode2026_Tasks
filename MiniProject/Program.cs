@@ -2,8 +2,23 @@
 
 class Program
 {
+    static List<string> accountsNames = new List<string>();
+    static List<int> accountNumbers = new List<int>();
+    static List<double> balances = new List<double>();
     static void Main(string[] args)
     {
+        Console.WriteLine("Enter your name: ");
+        string name = Console.ReadLine();
+        
+        Console.WriteLine("Enter your account number: ");
+        int accountNumber = int.Parse(Console.ReadLine());
+
+        if (accountNumbers.Contains(accountNumber))
+        {
+            Console.WriteLine("Your account number already exists");
+            return;
+        }
+        
         Console.WriteLine("Welcome to Spark Bank ");
         bool exit = false;
         
