@@ -84,6 +84,14 @@ class Program
             Console.WriteLine("Error: Negative balance");
         }
         
+        accountsNames.Add(name);
+        accountNumbers.Add(accountNumber);
+        accountBalances.Add(balance);
+
+        Console.WriteLine("Account created successfully");
+        Console.WriteLine("Name: " + name);
+        Console.WriteLine("Account Number: " + accountNumber);
+        Console.WriteLine("Balance: " + balance);
     }
 
     static void DepositMoney()
