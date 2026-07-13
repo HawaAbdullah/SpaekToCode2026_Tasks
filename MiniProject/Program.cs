@@ -122,7 +122,14 @@ class Program
 
     static void WithdrawMoney()
     {
-
+        Console.WriteLine("Enter your account number: ");
+        int accountNumber = int.Parse(Console.ReadLine());
+        int index = accountNumbers.IndexOf(accountNumber);
+        if (index == -1)
+        {
+            Console.WriteLine("Error: account not found");
+        }
+        
     }
 
     static void ShowBalance()
