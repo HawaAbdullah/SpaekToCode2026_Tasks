@@ -106,6 +106,18 @@ class Program
             return;
         }
 
+        Console.WriteLine("Enter deposit amount: ");
+        double amount = double.Parse(Console.ReadLine());
+        //check if it is possible amount 
+        if (amount <= 0)
+        {
+            Console.WriteLine("Error: Negative amount");
+            return;
+        }
+        //add money to balance
+        accountBalances[index] +=amount;
+        Console.WriteLine("Deposit successful!");
+        Console.WriteLine($"Updated balance: {accountBalances[index]}");
     }
 
     static void WithdrawMoney()
