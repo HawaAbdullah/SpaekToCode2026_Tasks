@@ -128,7 +128,30 @@ class Program
         if (index == -1)
         {
             Console.WriteLine("Error: account not found");
+            return;
         }
+        Console.Write("Enter withdrawal amount: ");
+        double amount = double.Parse(Console.ReadLine());
+
+        
+        if (amount <= 0)
+        {
+            Console.WriteLine("Error: Withdrawal amount must be positive.");
+            return;
+        }
+
+        //Check enough balance
+        if (amount > accountBalances[index])
+        {
+            Console.WriteLine("Error: Insufficient balance.");
+            return;
+        }
+
+        // Withdraw money
+        accountBalances[index] -= amount;
+
+        Console.WriteLine("Withdrawal successful!");
+        Console.WriteLine($"Updated balance: {accountBalances[index]}");
         
     }
 
