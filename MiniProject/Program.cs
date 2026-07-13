@@ -157,12 +157,41 @@ class Program
 
     static void ShowBalance()
     {
-
+        
+        Console.WriteLine("Enter your account number: ");
+        int accountNumber = int.Parse(Console.ReadLine());
+        int index = accountNumbers.IndexOf(accountNumber);
+        
+        if (index == -1)
+        {
+            Console.WriteLine("Error: account not found");
+            return;
+        }
+        
+        Console.WriteLine("\nAccount Details:");
+        Console.WriteLine("Name: " + accountsNames[index]);
+        Console.WriteLine("Account Number: " + accountNumbers[index]);
+        Console.WriteLine("Balance: " + accountBalances[index]);
+        
     }
 
     static void TransferAmount()
     {
+        Console.WriteLine("Enter your account number: ");
+        int accountNumber = int.Parse(Console.ReadLine());
+        Console.WriteLine("Enter receiver account number: ");
+        int receiverAccountNumber = int.Parse(Console.ReadLine());
+        
+        int SenderIndex = accountNumbers.IndexOf(accountNumber);
+        int receiverIndex = accountNumbers.IndexOf(receiverAccountNumber);
+        if (SenderIndex == -1 || receiverIndex == -1)
+        {
+            Console.WriteLine("Error: account not found");
+            return;
+        }
 
+        Console.WriteLine("Enter transfer amount: ");
+        int amount = int.Parse(Console.ReadLine());
     }
 
     static void ListAccounts()
