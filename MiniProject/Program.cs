@@ -7,28 +7,8 @@ class Program
     static List<double> accountBalances = new List<double>();
     static void Main(string[] args)
     {
-        Console.WriteLine("Enter your name: ");
-        string name = Console.ReadLine();
         
-        Console.WriteLine("Enter your account number: ");
-        int accountNumber = int.Parse(Console.ReadLine());
-
-        if (accountNumbers.Contains(accountNumber))
-        {
-            Console.WriteLine("Your account number already exists");
-            return;
-        }
-
-        Console.WriteLine("Enter initial deposit amount: ");
-        double balance = double.Parse(Console.ReadLine());
-        if (balance < 0)
-        {
-            Console.WriteLine("Error: Negative balance");
-            return;
-        }
-        accountsNames.Add(name);
-        accountNumbers.Add(accountNumber);
-        accountBalances.Add(balance);
+        
         Console.WriteLine("Welcome to Spark Bank ");
         bool exit = false;
         
@@ -51,6 +31,88 @@ class Program
                 exit = true;
                 Console.WriteLine("Thank you for using Spark Bank");
             }
+            switch (choice)
+            {
+                case 1:
+                    AddAccount();
+                    break;
+                case 2:
+                    DepositMoney();
+                    break;
+                case 3:
+                    WithdrawMoney();
+                    break;
+                case 4:
+                    ShowBalance();
+                    break;
+                case 5:
+                    TransferAmount();
+                    break;
+                case 6:
+// TODO: call your first custom service function here
+                    break;
+                case 7:
+// TODO: call your second custom service function here
+                    break;
+                case 8:
+                    exit = true;
+                    Console.WriteLine("Thank you for banking with Spark Bank. Goodbye!");
+                    break;
+                default:
+                    break;
+            }
+
+            
         }
+    }
+    static void AddAccount()
+    {
+        Console.WriteLine("Enter customer name: ");
+        string name = Console.ReadLine();
+        Console.WriteLine("Enter customer account number: ");
+        int accountNumber = int.Parse(Console.ReadLine());
+        //MAKE SURE EVERY ONE HAS UNQUE NUMBER
+        if (accountNumbers.Contains(accountNumber))
+        {
+            Console.WriteLine("Your account number already exists");
+        }
+        //TO MACK SURE IT IS POSITIVE BALANCS
+        Console.WriteLine("Enter initial deposit amount: ");
+        double balance = double.Parse(Console.ReadLine());
+        if (balance < 0)
+        {
+            Console.WriteLine("Error: Negative balance");
+        }
+        
+    }
+
+    static void DepositMoney()
+    {
+
+    }
+
+    static void WithdrawMoney()
+    {
+
+    }
+
+    static void ShowBalance()
+    {
+
+    }
+
+    static void TransferAmount()
+    {
+
+    }
+
+    static void ListAccounts()
+    {
+
+    }
+
+    static void CloseAccount()
+    {
+
     }
 }
