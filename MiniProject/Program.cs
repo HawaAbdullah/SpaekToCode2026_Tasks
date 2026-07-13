@@ -96,6 +96,15 @@ class Program
 
     static void DepositMoney()
     {
+        Console.WriteLine("Enter your account number: ");
+        int accountNumber = int.Parse(Console.ReadLine());
+        //check if account is exists
+        int index = accountNumbers.IndexOf(accountNumber);
+        if (index == -1)
+        {
+            Console.WriteLine("Error: account not found");
+            return;
+        }
 
     }
 
