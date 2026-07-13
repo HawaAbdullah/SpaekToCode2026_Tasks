@@ -192,6 +192,24 @@ class Program
 
         Console.WriteLine("Enter transfer amount: ");
         int amount = int.Parse(Console.ReadLine());
+        if (amount <= 0)
+        {
+            Console.WriteLine("Error: Amount must be positive.");
+            return;
+        }
+
+        if (amount > accountBalances[SenderIndex])
+        {
+            Console.WriteLine("Error: Insufficient balance.");
+            return;
+        }
+        accountBalances[SenderIndex] += amount;
+        accountBalances[receiverIndex] -= amount;
+        Console.WriteLine("Withdrawal successful!");
+        Console.WriteLine($"Updated balance: {accountBalances[SenderIndex]}");
+        Console.WriteLine($"Withdrawal amount: {accountBalances[receiverIndex]}");
+        
+        
     }
 
     static void ListAccounts()
