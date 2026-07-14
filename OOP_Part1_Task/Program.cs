@@ -219,9 +219,33 @@ class Program
                     break;
                 case 8:
                     RestockProduct();
+                    Console.Write("Enter quantity to restock: ");
+                    int quantity = int.Parse(Console.ReadLine());
+
+                    product1.Restock(quantity);
+
+                    Console.WriteLine("Product restocked successfully.");
                     break;
                 case 9:
                     TransferBetweenAccounts();
+                    Console.Write("Enter transfer amount: ");
+                    double amount = double.Parse(Console.ReadLine());
+
+                    if (amount <= 0)
+                    {
+                        Console.WriteLine("Invalid amount.");
+                    }
+                    else if (account1.Balance < amount)
+                    {
+                        Console.WriteLine("Insufficient balance.");
+                    }
+                    else
+                    {
+                        account1.Withdraw(amount);
+                        account2.Deposit(amount);
+
+                        Console.WriteLine("Transfer completed successfully.");
+                    }
                     break;
                 case 10:
                     UpdateStudentGrade();
