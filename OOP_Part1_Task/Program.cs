@@ -116,11 +116,28 @@ public class Product
 }
 
 
+
+
+
+
+
+
+
+
+
 class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
-        
+        BankAccount account1 =new BankAccount();
+        BankAccount account2 = new BankAccount();
+
+        Student student1 = new Student();
+        Student student2 = new Student();
+
+        Product product1 = new Product();
+        Product product2 = new Product();
+
+
     }
 }
