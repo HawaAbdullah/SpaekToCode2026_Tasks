@@ -197,10 +197,25 @@ class Program
                     student1.Grade = int.Parse(Console.ReadLine());
                     Console.WriteLine("Enter student email: ");
                     string email = Console.ReadLine();
+                    student1.Register(email);
+
+                    Console.WriteLine("Student registered successfully.");
                     
                     break;
                 case 7:
                     CompareTowAccountBalances();
+                    if (account1.Balance > account2.Balance)
+                    {
+                        Console.WriteLine($"{account1.HolderName} has the higher balance.");
+                    }
+                    else if (account2.Balance > account1.Balance)
+                    {
+                        Console.WriteLine($"{account2.HolderName} has the higher balance.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Both accounts have the same balance.");
+                    }
                     break;
                 case 8:
                     RestockProduct();
