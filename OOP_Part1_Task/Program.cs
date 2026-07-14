@@ -128,21 +128,133 @@
 
 class Program
     {
-        BankAccount account1 = new BankAccount{AccountNumber=1163, HolderName="karim", Balance=120};
-        BankAccount account2 = new BankAccount{AccountNumber =15203, HolderName= "Ali", Balance= 63};
+        static BankAccount account1 = new BankAccount{AccountNumber=1163, HolderName="karim", Balance=120};
+        static BankAccount account2 = new BankAccount{AccountNumber =15203, HolderName= "Ali", Balance= 63};
 
-        Student student1 = new Student{Name ="Ali", Address ="Muscat", Grade= 65};
-        Student student2 = new Student{Name ="Ahmed", Address= "Muscat", Grade =70};
+        static Student student1 = new Student{Name ="Ali", Address ="Muscat", Grade= 65};
+        static Student student2 = new Student{Name ="Ahmed", Address= "Muscat", Grade =70};
 
-        Product product1 = new Product{ProductName ="Wireless Mouse", Price= 5.500, StockQuantity= 50};
-        Product product2 = new Product{ProductName ="Mechanical Keyboard", Price =15.750, StockQuantity =20};
+        static Product product1 = new Product{ProductName ="Wireless Mouse", Price= 5.500, StockQuantity= 50};
+        static Product product2 = new Product{ProductName ="Mechanical Keyboard", Price =15.750, StockQuantity =20};
+
+        static void ViewAccountDetails()
+        {
+            Console.WriteLine("Choose account 1 or 2: ");
+            int i = int.Parse(Console.ReadLine());
+            if (i == 1)
+            {
+                double result = account1.CheckBalance();
+                Console.WriteLine("Your Balance is " + result);
+            }
+            else if (i == 2)
+            {
+                double result = account2.CheckBalance();
+                Console.WriteLine("Your Balance is " + result);
+            }
+            else
+            {
+                Console.WriteLine("Enter valid account number");
+            }
+        }
+
+        static void UpdateStudentAddress()
+        {
+            
+        }
+
+        static void MakeDeposit()
+        {
+            
+            
+        }
+
+        static void MakeWithdrawal()
+        {
+            
+        }
+
+        static void ViewProductDetails()
+        {
+            
+        }
+
+        static void RegisterStudent()
+        {
+            
+        }
+
+        static void CompareTowAccountBalances()
+        {
+            
+        }
+
+        static void RestockProduct()
+        {
+            
+        }
+
+        static void TransferBetweenAccounts()
+        {
+            
+        }
+
+        static void UpdateStudentGrade()
+        {
+            
+        }
+
+        static void StudentReportCard()
+        {
+            
+        }
+
+        static void AccountHealthStatus()
+        {
+            
+        }
+
+        static void BulkSale()
+        {
+            
+        }
+
+        static void ScholarshipEligibility()
+        {
+            
+        }
+
+        static void FullBalance()
+        {
+            
+        }
+
+        static void QuickAccountOpening()
+        {
+            
+        }
+
+        static void TotalStudents()
+        {
+            
+        }
+
+        static void OverdrawnAccountCheck()
+        {
+            
+        }
+
+        static void SetStudentSecurityPIN()
+        {
+            
+        }
+        
         static void Main(string[] args)
         {
             
 
             bool exit = false;
 
-            while (!exit)
+            while (exit == false)
             {
 
                 Console.WriteLine("Main Menu");
@@ -173,42 +285,61 @@ class Program
                 switch (choice)
                 {
                     case 1:
+                        ViewAccountDetails();
                         break;
                     case 2:
+                        UpdateStudentAddress();
                         break;
                     case 3:
+                        MakeDeposit();
                         break;
                     case 4:
+                        MakeWithdrawal();
                         break;
                     case 5:
+                        ViewProductDetails();
                         break;
                     case 6:
+                        RegisterStudent();
                         break;
                     case 7:
+                        CompareTowAccountBalances();
                         break;
                     case 8:
+                        RestockProduct();
                         break;
                     case 9:
+                        TransferBetweenAccounts();
                         break;
                     case 10:
+                        UpdateStudentGrade();
                         break;
                     case 11:
+                        StudentReportCard();
                         break;
                     case 12:
+                        AccountHealthStatus();
                         break;
                     case 13:
+                        BulkSale();
                         break;
                     case 14:
+                        ScholarshipEligibility();
                         break;
                     case 15:
+                        FullBalance();
                         break;
                     case 16:
+                        QuickAccountOpening();
                         break;
                     case 17:
+                        TotalStudents();
                         break;
                     case 18:
+                        OverdrawnAccountCheck();
                         break;
                     case 19:
+                        SetStudentSecurityPIN();
                         break;
                     case 20:
                         exit = true;
